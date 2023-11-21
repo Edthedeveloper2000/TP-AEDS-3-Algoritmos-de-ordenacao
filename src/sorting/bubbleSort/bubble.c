@@ -1,6 +1,6 @@
 #include <time.h>
 #include <stdio.h>
-#include "../../card.h"
+#include "../../types/Card/card.h"
 
 void swap(Card *card_1, Card *card_2) {
     Card temp = *card_1;
