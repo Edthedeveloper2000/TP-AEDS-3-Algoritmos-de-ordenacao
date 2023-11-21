@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 #include "card.h"
 
 void initializeCard(Card *card, char *color, char *value) {
@@ -6,7 +7,7 @@ void initializeCard(Card *card, char *color, char *value) {
     setValue(card, value);
 }
 
-char getColor(Card *card) {
+char * getColor(Card *card) {
     return card->color;
 }
 void setColor(Card *card, char *color) {
@@ -14,7 +15,7 @@ void setColor(Card *card, char *color) {
     setColorId(card, color);
 }
 
-char getValue(Card *card) {
+char * getValue(Card *card) {
     return card->value;
 }
 void setValue(Card *card, char *value) {
@@ -43,25 +44,25 @@ int getValueId(Card *card) {
     return card->valueId;
 }
 void setValueId(Card *card, char *value) {
-     if(strcmp(value, 0)) {
+     if(strcmp(value, "0")) {
         card->valueId = 1;
-    } else if (strcmp(value, 1)) {
+    } else if (strcmp(value, "\01")) {
         card->valueId = 2;
-    } else if (strcmp(value, 2)) {
+    } else if (strcmp(value, "\02")) {
         card->valueId = 3;
-    } else if (strcmp(value, 3))  {
+    } else if (strcmp(value, "\03"))  {
         card->valueId = 4;
-    } else if (strcmp(value, 4))  {
+    } else if (strcmp(value, "\04"))  {
         card->valueId = 4;
-    } else if (strcmp(value, 5))  {
+    } else if (strcmp(value, "\05"))  {
         card->valueId = 5;
-    } else if (strcmp(value, 6))  {
+    } else if (strcmp(value, "\06"))  {
         card->valueId = 6;
-    } else if (strcmp(value, 7))  {
+    } else if (strcmp(value, "\07"))  {
         card->valueId = 7;
-    } else if (strcmp(value, 8))  {
+    } else if (strcmp(value, "\08"))  {
         card->valueId = 8;
-    } else if (strcmp(value, 9)) {
+    } else if (strcmp(value, "\09")) {
         card->valueId = 9;
     } else if (strcmp(value, BLOQUEAR)) {
         card->valueId = 10;
@@ -77,5 +78,5 @@ void setValueId(Card *card, char *value) {
 }
 
 void showCard(Card *card) {
-    printf("%s %s", getColor(card), getvalue(card));
+    printf("%s %s", getColor(card), getValue(card));
 }
