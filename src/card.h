@@ -1,16 +1,17 @@
 /* Definição de cores */
-#define AZUL "Azul"
-#define AMARELO "Amarelo"
-#define VERDE "Verde"
-#define VERMELHO "Vermelho"
+#define VERDE "Verde" // colorId 1
+#define AMARELO "Amarelo" // colorId 2
+#define VERMELHO "Vermelho" // colorId 3
+#define AZUL "Azul" // colorId 4
+#define PRETO "preto" // colorId 5
 
 /* Definição de cartas especiais */
 
-#define BLOQUEAR "pular"
-#define CORINGA "coringa"
-#define VOLTAR "voltar"
-#define MAIS_2 "+2"
-#define MAIS_4 "+4"
+#define BLOQUEAR "pular" // valueId 10
+#define VOLTAR "voltar" // valueId 11
+#define MAIS_2 "+2" // valueId 12 
+#define MAIS_4 "+4" // valueId 13
+#define CORINGA "coringa" // valueId 14
 
 typedef struct {
     char color[10];
@@ -21,10 +22,10 @@ typedef struct {
 
 void initializeCard(Card *card, char *color, char *value);
 
-char getColor(Card *card);
+char * getColor(Card *card);
 void setColor(Card *card, char *color);
 
-char getValue(Card *card);
+char * getValue(Card *card);
 void setValue(Card *card, char *value);
 
 int getColorId(Card *card);
