@@ -1,6 +1,6 @@
 #include <time.h>
 #include <stdio.h>
-#include "../../types/Card/card.h"
+#include "bubble.h"
 
 void swap(Card *card_1, Card *card_2) {
     Card temp = *card_1;
@@ -8,14 +8,8 @@ void swap(Card *card_1, Card *card_2) {
     *card_2 = temp;
 }
 
-void printArray(Card arr[], int size) {
-    int i;
-    for (i = 0; i < size; i++) {
-        printf("[%d]: %s %s \n", i + 1, arr[i].color, arr[i].value);
-    }
-}
 
-void bubbleSort(Card cards[], int n) {
+SortingPayload bubbleSort(Card cards[], int n) {
     int i, j;
     int moves = 0;
     int comparisons = 0;
@@ -42,10 +36,8 @@ void bubbleSort(Card cards[], int n) {
 
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 
-    printf("Bubble Sort:\n");
-    printf("Mão de cartas:\n");
-    printArray(cards, n);
-    printf("Comparaçõeções: %d, ", comparisons);
-    printf("Movimentos: %d, ", moves);
-    printf("Tempo: %f segundos\n", cpu_time_used);
+    SortingPayload payload;
+    createSortingPayload(&payload, n, moves, comparisons, cpu_time_used, cards);
+    return payload;
 }
+
