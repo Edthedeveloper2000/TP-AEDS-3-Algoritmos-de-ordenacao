@@ -22,4 +22,5 @@ void showSortingPayload( SortingPayload *payload) {
     printf("Comparações: %d, ", payload->comparisons);
     printf("Movimentos: %d, ", payload->moves);
     printf("Tempo: %f segundos\n", payload->time);
+    printf("-------------------------\n");
 }
