@@ -1,3 +1,6 @@
+#ifndef CARD_H
+#define CARD_H
+
 /* Definição de cores */
 #define VERDE "Verde" // colorId 1
 #define AMARELO "Amarelo" // colorId 2
@@ -36,3 +39,4 @@ void setValueId(Card *card, char *value);
 
 void showCard(Card *card);
 
+#endif // CARD_H
