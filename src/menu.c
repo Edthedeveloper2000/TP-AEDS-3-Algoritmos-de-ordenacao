@@ -34,17 +34,33 @@ void startInteractiveMode() {
     printf("MÂO INICIAL: \n");
     printArray(cards, 10);
 
-    SortingPayload payload = bubbleSort(cards, 10);
+    Card* cardsSelect = copyArray(cards, 10);
+    Card* cardsBubble = copyArray(cards, 10);
+
+    SortingPayload SelectPayload = SelectSort(cardsSelect, 10);
+
+    printf("Select Sort:\n ");
+    showSortingPayload(&SelectPayload);
+
+    SortingPayload payload = bubbleSort(cardsBubble, 10);
 
     printf("Bubble Sort:\n ");
     showSortingPayload(&payload);
 
-    SortingPayload SelectPayload = SelectSort(cards, 10);
+    free(cardsSelect);
+    free(cardsBubble);
 
-    printf("Select Sort:\n ");
-    showSortingPayload(&SelectPayload);
 }
 
 void startFileMode() {
 
+}
+
+Card* copyArray(const Card* source, int size) {
+    Card* copy = malloc(size * sizeof(Card));
+    if (copy == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    memcpy(copy, source, size * sizeof(Card));
+    return copy;
 }
