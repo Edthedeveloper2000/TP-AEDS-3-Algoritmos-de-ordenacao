@@ -20,6 +20,7 @@ char * getValue(Card *card) {
 }
 void setValue(Card *card, char *value) {
     strcpy(card->value, value);
+    setValueId(card, value);
 }
 
 int getColorId(Card *card) {
@@ -27,55 +28,58 @@ int getColorId(Card *card) {
 }
 
 void setColorId(Card *card, char *color) {
-    if(strcmp(color, VERDE)) {
+    if(strcmp(color, VERDE) == 0) {
         card->colorId = 1;
-    } else if (strcmp(color, AMARELO)) {
+    } else if (strcmp(color, AMARELO) == 0) {
         card->colorId = 2;
-    } else if (strcmp(color, VERMELHO)) {
+    } else if (strcmp(color, VERMELHO) == 0) {
         card->colorId = 3;
-    } else if (strcmp(color, AZUL))  {
+    } else if (strcmp(color, AZUL) == 0)  {
         card->colorId = 4;
-    }else {
+    } else {
         card->colorId = 5;
     }
 }
 
+
 int getValueId(Card *card) {
     return card->valueId;
 }
+
 void setValueId(Card *card, char *value) {
-     if(strcmp(value, "0")) {
+    if (strcmp(value, "0") == 0) {
+        card->valueId = 0;
+    } else if (strcmp(value, "1") == 0) {
         card->valueId = 1;
-    } else if (strcmp(value, "\01")) {
+    } else if (strcmp(value, "2") == 0) {
         card->valueId = 2;
-    } else if (strcmp(value, "\02")) {
+    } else if (strcmp(value, "3") == 0) {
         card->valueId = 3;
-    } else if (strcmp(value, "\03"))  {
+    } else if (strcmp(value, "4") == 0) {
         card->valueId = 4;
-    } else if (strcmp(value, "\04"))  {
-        card->valueId = 4;
-    } else if (strcmp(value, "\05"))  {
+    } else if (strcmp(value, "5") == 0) {
         card->valueId = 5;
-    } else if (strcmp(value, "\06"))  {
+    } else if (strcmp(value, "6") == 0) {
         card->valueId = 6;
-    } else if (strcmp(value, "\07"))  {
+    } else if (strcmp(value, "7") == 0) {
         card->valueId = 7;
-    } else if (strcmp(value, "\08"))  {
+    } else if (strcmp(value, "8") == 0) {
         card->valueId = 8;
-    } else if (strcmp(value, "\09")) {
+    } else if (strcmp(value, "9") == 0) {
         card->valueId = 9;
-    } else if (strcmp(value, BLOQUEAR)) {
+    } else if (strcmp(value, BLOQUEAR) == 0) {
         card->valueId = 10;
-    } else if (strcmp(value, VOLTAR))  {
+    } else if (strcmp(value, VOLTAR) == 0) {
         card->valueId = 11;
-    } else if (strcmp(value, MAIS_2))  {
+    } else if (strcmp(value, MAIS_2) == 0) {
         card->valueId = 12;
-    } else if (strcmp(value, MAIS_4))  {
+    } else if (strcmp(value, MAIS_4) == 0) {
         card->valueId = 13;
-    } else if (strcmp(value, CORINGA))  {
+    } else if (strcmp(value, CORINGA) == 0) {
         card->valueId = 14;
     }
 }
+
 
 void showCard(Card *card) {
     printf("%s %s", getColor(card), getValue(card));
