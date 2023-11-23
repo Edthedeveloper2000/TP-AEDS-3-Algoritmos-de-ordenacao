@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "menu.h"
 #include "./sorting/bubbleSort/bubble.h"
+#include "./sorting/selectSort/select.h"
 
 void showInitialMenu() {
     int mode;
@@ -37,6 +38,11 @@ void startInteractiveMode() {
 
     printf("Bubble Sort:\n ");
     showSortingPayload(&payload);
+
+    SortingPayload SelectPayload = SelectSort(cards, 10);
+
+    printf("Select Sort:\n ");
+    showSortingPayload(&SelectPayload);
 }
 
 void startFileMode() {
