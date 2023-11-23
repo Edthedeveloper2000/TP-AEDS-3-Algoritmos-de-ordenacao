@@ -36,26 +36,25 @@ void startInteractiveMode() {
     printf("MÂO INICIAL: \n");
     printArray(cards, 10);
 
+    /* SELECT SORT */
     Card* cardsSelect = copyArray(cards, 10);
-    Card* cardsBubble = copyArray(cards, 10);
-    Card* cardsInsert = copyArray(cards, 10);
-
     SortingPayload SelectPayload = SelectSort(cardsSelect, 10);
-
     printf("Select Sort:\n ");
     showSortingPayload(&SelectPayload);
+    free(cardsSelect);
 
+    /* BUBBLE SORT */
+    Card* cardsBubble = copyArray(cards, 10);
     SortingPayload payload = bubbleSort(cardsBubble, 10);
-
+    free(cardsBubble);
     printf("Bubble Sort:\n ");
     showSortingPayload(&payload);
 
+    /* INSERT SORT */
+    Card* cardsInsert = copyArray(cards, 10);
     SortingPayload InsertPayload = insertSort(cardsInsert, 10);
     printf("Insert Sort:\n ");
     showSortingPayload(&InsertPayload);
-
-    free(cardsSelect);
-    free(cardsBubble);
     free(cardsInsert);
 
 }
