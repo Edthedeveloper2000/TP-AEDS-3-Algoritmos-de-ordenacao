@@ -3,6 +3,8 @@
 #include "menu.h"
 #include "./sorting/bubbleSort/bubble.h"
 #include "./sorting/selectSort/select.h"
+#include "./sorting/InsertSort/insert.h"
+
 
 void showInitialMenu() {
     int mode;
@@ -36,6 +38,7 @@ void startInteractiveMode() {
 
     Card* cardsSelect = copyArray(cards, 10);
     Card* cardsBubble = copyArray(cards, 10);
+    Card* cardsInsert = copyArray(cards, 10);
 
     SortingPayload SelectPayload = SelectSort(cardsSelect, 10);
 
@@ -47,8 +50,13 @@ void startInteractiveMode() {
     printf("Bubble Sort:\n ");
     showSortingPayload(&payload);
 
+    SortingPayload InsertPayload = insertSort(cardsInsert, 10);
+    printf("Insert Sort:\n ");
+    showSortingPayload(&InsertPayload);
+
     free(cardsSelect);
     free(cardsBubble);
+    free(cardsInsert);
 
 }
 
