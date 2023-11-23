@@ -4,14 +4,24 @@
 #include "quick.h"
 #include "../../utils/swap/swap.h"
 
-int partition(Card cards[], int low, int high) {
+int partition(Card cards[], int low, int high, int *moves, int *comparisons) {
     Card pivot = cards[high];
     int i = low - 1;
 
     for (int j = low; j <= high - 1; j++) {
-        if (cards[j].colorId < pivot.colorId || (cards[j].colorId == pivot.colorId && cards[j].valueId < pivot.valueId)) {
+        if (cards[j].colorId < pivot.colorId) {
             i++;
             swap(&cards[i], &cards[j]);
+            (*moves)++;
+            (*comparisons)++;
+
+        } else if  (cards[j].colorId == pivot.colorId && cards[j].valueId < pivot.valueId) {
+            i++;
+            swap(&cards[i], &cards[j]);
+            *moves++;   
+            (*comparisons)+=2;
+        } else {
+            (*comparisons)+=2;
         }
     }
 
@@ -19,12 +29,13 @@ int partition(Card cards[], int low, int high) {
     return i + 1;
 }
 
-void quickSort(Card cards[], int low, int high) {
+void quickSort(Card cards[], int low, int high, int *moves, int *comparisons) {
     if (low < high) {
-        int pi = partition(cards, low, high);
+        (*moves)++;
+        int pi = partition(cards, low, high, moves, comparisons);
 
-        quickSort(cards, low, pi - 1);
-        quickSort(cards, pi + 1, high);
+        quickSort(cards, low, pi - 1, moves, comparisons);
+        quickSort(cards, pi + 1, high, moves, comparisons);
     }
 }
 
@@ -35,7 +46,7 @@ SortingPayload quickSortWrapper(Card cards[], int n) {
     clock_t start, end;
     start = clock();
 
-    quickSort(cards, 0, n - 1);
+    quickSort(cards, 0, n - 1, &moves, &comparisons);
 
     end = clock();
     cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
