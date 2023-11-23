@@ -7,6 +7,7 @@
 #include "./sorting/InsertSort/insert.h"
 #include "./sorting/shellSort/shell.h"
 #include "./sorting/quickSort/quick.h"
+#include "./sorting/heapSort/heap.h"
 
 
 void showInitialMenu() {
@@ -73,6 +74,13 @@ void startInteractiveMode() {
     printf("Quick Sort:\n ");
     showSortingPayload(&QuickPayload);
     free(cardsQuick);
+
+    /* HEAP SORT */
+    Card* cardsHeap = copyArray(cards, 10);
+    SortingPayload HeapPayload = heapSort(cardsHeap, 10);
+    printf("Heap Sort:\n ");
+    showSortingPayload(&HeapPayload);
+    free(cardsHeap);
 
 }
 
