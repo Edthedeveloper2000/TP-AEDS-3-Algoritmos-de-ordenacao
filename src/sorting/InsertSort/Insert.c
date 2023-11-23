@@ -12,17 +12,17 @@ SortingPayload insertSort(Card cards[], int n) {
     start = clock();
 
     for (i = 1; i < n; i++) {
-        Card key = cards[i];
+        Card aux = cards[i];
         j = i - 1;
 
-        while (j >= 0 && (cards[j].colorId > key.colorId || (cards[j].colorId == key.colorId && cards[j].valueId > key.valueId))) {
+        while (j >= 0 && (cards[j].colorId > aux.colorId || (cards[j].colorId == aux.colorId && cards[j].valueId > aux.valueId))) {
             cards[j + 1] = cards[j];
             j = j - 1;
             moves++;
             comparisons += 2; 
         }
 
-        cards[j + 1] = key;
+        cards[j + 1] = aux;
         moves++;
     }
 
