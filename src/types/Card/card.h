@@ -3,15 +3,15 @@
 #define AMARELO "Amarelo" // colorId 2
 #define VERMELHO "Vermelho" // colorId 3
 #define AZUL "Azul" // colorId 4
-#define PRETO "preto" // colorId 5
+#define PRETO "Preto" // colorId 5
 
 /* Definição de cartas especiais */
 
-#define BLOQUEAR "pular" // valueId 10
-#define VOLTAR "voltar" // valueId 11
+#define BLOQUEAR "Pular" // valueId 10
+#define VOLTAR "Voltar" // valueId 11
 #define MAIS_2 "+2" // valueId 12 
 #define MAIS_4 "+4" // valueId 13
-#define CORINGA "coringa" // valueId 14
+#define CORINGA "Coringa" // valueId 14
 
 typedef struct {
     char color[10];
