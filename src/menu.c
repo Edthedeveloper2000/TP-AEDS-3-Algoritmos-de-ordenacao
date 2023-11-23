@@ -4,6 +4,7 @@
 #include "./sorting/bubbleSort/bubble.h"
 #include "./sorting/selectSort/select.h"
 #include "./sorting/InsertSort/insert.h"
+#include "./sorting/shellSort/shell.h"
 
 
 void showInitialMenu() {
@@ -56,6 +57,13 @@ void startInteractiveMode() {
     printf("Insert Sort:\n ");
     showSortingPayload(&InsertPayload);
     free(cardsInsert);
+
+    /* SHELL SORT */
+    Card* cardsShell = copyArray(cards, 10);
+    SortingPayload ShellPayload = shellSort(cardsShell, 10);
+    printf("Shell Sort:\n ");
+    showSortingPayload(&ShellPayload);
+    free(cardsShell);
 
 }
 
