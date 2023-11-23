@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "menu.h"
 #include "./sorting/bubbleSort/bubble.h"
 #include "./sorting/selectSort/select.h"
 #include "./sorting/InsertSort/insert.h"
 #include "./sorting/shellSort/shell.h"
+#include "./sorting/quickSort/quick.h"
 
 
 void showInitialMenu() {
@@ -18,7 +20,7 @@ void showInitialMenu() {
     mode == 1 ?  startInteractiveMode() : startFileMode();
     
 }
-
+// Modo Interativo
 void startInteractiveMode() {
     Card cards[10];
     char color[10];
@@ -65,12 +67,20 @@ void startInteractiveMode() {
     showSortingPayload(&ShellPayload);
     free(cardsShell);
 
+    /* QUICK SORT */
+    Card* cardsQuick = copyArray(cards, 10);
+    SortingPayload QuickPayload = quickSortWrapper(cardsQuick, 10);
+    printf("Quick Sort:\n ");
+    showSortingPayload(&QuickPayload);
+    free(cardsQuick);
+
 }
 
 void startFileMode() {
 
 }
 
+// Cópia das cartas iniciais
 Card* copyArray(const Card* source, int size) {
     Card* copy = malloc(size * sizeof(Card));
     if (copy == NULL) {
