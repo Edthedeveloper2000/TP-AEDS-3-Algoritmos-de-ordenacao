@@ -34,10 +34,10 @@ void startInteractiveMode() {
         cards[i] = currentCard;
     }
 
-    printf("Carta de exemplo: \n cor: %s \n valor: %s \n valueId %d colorId %d \n", cards[1].color, cards[1].value, cards[1].valueId, cards[1].colorId);
-
+    printf("-------------------------\n");
     printf("MÂO INICIAL: \n");
     printArray(cards, 10);
+    printf("-------------------------\n");
 
     /* SELECT SORT */
     Card* cardsSelect = copyArray(cards, 10);
