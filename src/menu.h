@@ -5,5 +5,3 @@ void showInitialMenu();
 void startInteractiveMode();
 
 void startFileMode();
-
-Card* copyArray(const Card* source, int size);
