@@ -28,13 +28,13 @@ int getColorId(Card *card) {
 }
 
 void setColorId(Card *card, char *color) {
-    if(strcmp(color, VERDE) == 0) {
+    if(strcmp(color, GREEN) == 0) {
         card->colorId = 1;
-    } else if (strcmp(color, AMARELO) == 0) {
+    } else if (strcmp(color, YELLOW) == 0) {
         card->colorId = 2;
-    } else if (strcmp(color, VERMELHO) == 0) {
+    } else if (strcmp(color, RED) == 0) {
         card->colorId = 3;
-    } else if (strcmp(color, AZUL) == 0)  {
+    } else if (strcmp(color, BLUE) == 0)  {
         card->colorId = 4;
     } else {
         card->colorId = 5;
@@ -67,15 +67,15 @@ void setValueId(Card *card, char *value) {
         card->valueId = 8;
     } else if (strcmp(value, "9") == 0) {
         card->valueId = 9;
-    } else if (strcmp(value, BLOQUEAR) == 0) {
+    } else if (strcmp(value, BLOCK) == 0) {
         card->valueId = 10;
-    } else if (strcmp(value, VOLTAR) == 0) {
+    } else if (strcmp(value, GOBACK) == 0) {
         card->valueId = 11;
-    } else if (strcmp(value, MAIS_2) == 0) {
+    } else if (strcmp(value, PLUS_TWO) == 0) {
         card->valueId = 12;
-    } else if (strcmp(value, MAIS_4) == 0) {
+    } else if (strcmp(value, PLUS_FOR) == 0) {
         card->valueId = 13;
-    } else if (strcmp(value, CORINGA) == 0) {
+    } else if (strcmp(value, JOKER) == 0) {
         card->valueId = 14;
     }
 }

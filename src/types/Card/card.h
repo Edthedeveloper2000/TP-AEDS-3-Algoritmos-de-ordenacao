@@ -2,19 +2,19 @@
 #define CARD_H
 
 /* Definição de cores */
-#define VERDE "Verde" // colorId 1
-#define AMARELO "Amarelo" // colorId 2
-#define VERMELHO "Vermelho" // colorId 3
-#define AZUL "Azul" // colorId 4
-#define PRETO "Preto" // colorId 5
+#define GREEN "Verde" // colorId 1
+#define YELLOW "Amarelo" // colorId 2
+#define RED "Vermelho" // colorId 3
+#define BLUE "Azul" // colorId 4
+#define BLACK "Preto" // colorId 5
 
 /* Definição de cartas especiais */
 
-#define BLOQUEAR "Pular" // valueId 10
-#define VOLTAR "Voltar" // valueId 11
-#define MAIS_2 "+2" // valueId 12 
-#define MAIS_4 "+4" // valueId 13
-#define CORINGA "Coringa" // valueId 14
+#define BLOCK "Pular" // valueId 10
+#define GOBACK "Voltar" // valueId 11
+#define PLUS_TWO "+2" // valueId 12 
+#define PLUS_FOR "+4" // valueId 13
+#define JOKER "Coringa" // valueId 14
 
 typedef struct {
     char color[10];
