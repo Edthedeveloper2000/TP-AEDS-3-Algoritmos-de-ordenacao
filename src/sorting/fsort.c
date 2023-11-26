@@ -12,17 +12,22 @@
 #define CARDS_LIST_SIZE 10
 
 
-void fsort(Card cards[]){
+void fsort(Card cards[], int testNumber){
     FILE* output;
 
-    output = fopen("src/tests/output.txt", "w");
+    output = testNumber == 0 ? fopen("src/tests/output.txt", "w") :  fopen("src/tests/output.txt", "a");
     if(output == NULL){
           printf("Falha ao processar o Arquivo");
         exit(EXIT_FAILURE);
     }
-    fprintf(output, "MAO INICIAL: \n");
-    fprintf(output, "Mao de cartas: \n");
-    
+
+    fprintf(output, "Teste Nº: %d\n", testNumber + 1);
+    fprintf(output, "-------------------------\n");
+    fprintf(output, "MÂO INICIAL: \n");
+    fprintf(output, "Mão de cartas: \n");
+    printArrayFile(cards, CARDS_LIST_SIZE, output);
+    fprintf(output, "-------------------------\n");
+
     // SELECT SORT
     Card* cardsSelect = copyArray(cards, CARDS_LIST_SIZE);
     SortingPayload SelectPayload = SelectSort(cardsSelect, CARDS_LIST_SIZE);
