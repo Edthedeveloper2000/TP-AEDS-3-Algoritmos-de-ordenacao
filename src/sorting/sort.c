@@ -27,10 +27,10 @@ void sort(Card cards[]){
 
     /* BUBBLE SORT */
     Card* cardsBubble = copyArray(cards, CARDS_LIST_SIZE);
-    SortingPayload payload = bubbleSort(cardsBubble, CARDS_LIST_SIZE);
-    free(cardsBubble);
+    SortingPayload bubbleSortPayload = bubbleSort(cardsBubble, CARDS_LIST_SIZE);
     printf("Bubble Sort:\n ");
-    showSortingPayload(&payload);
+    showSortingPayload(&bubbleSortPayload);
+    free(cardsBubble);
 
     /* INSERT SORT */
     Card* cardsInsert = copyArray(cards, CARDS_LIST_SIZE);
