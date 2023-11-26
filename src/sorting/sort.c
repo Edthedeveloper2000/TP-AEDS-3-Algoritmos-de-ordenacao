@@ -12,7 +12,8 @@
 
 #define CARDS_LIST_SIZE 10
 
-void sort(Card cards[]){
+void sort(Card cards[], int testNumber){
+    printf("Teste Nº: %d\n", testNumber + 1);
     printf("-------------------------\n");
     printf("MÂO INICIAL: \n");
     printArray(cards, CARDS_LIST_SIZE);
