@@ -4,6 +4,8 @@
 #include "./sorting/sort.h"
 #include "./sorting/fsort.h"
 
+#define CARDS_LIST_SIZE 10
+
 
 void showInitialMenu() {
     int mode;
@@ -18,13 +20,13 @@ void showInitialMenu() {
 }
 // Modo Interativo
 void startInteractiveMode() {
-    Card cards[10];
-    char color[10];
-    char value[10];
+    Card cards[CARDS_LIST_SIZE];
+    char color[CARDS_LIST_SIZE];
+    char value[CARDS_LIST_SIZE];
     int outputMode = 0;
 
-     printf("Informe cor e valor de 10 cartas: ex: (Azul 1)\n");
-    for(int i = 0; i<10;i++) {
+     printf("Informe cor e valor de CARDS_LIST_SIZE cartas: ex: (Azul 1)\n");
+    for(int i = 0; i<CARDS_LIST_SIZE;i++) {
         Card currentCard;
         scanf("%s %s", color, value);
         initializeCard(&currentCard, color, value);
@@ -66,13 +68,13 @@ void startFileMode() {
     fscanf(file, "%d", &n);
 
     for (int testNumber = 0; testNumber < n; testNumber++) {
-        Card cards[10];
-        char color[10];
-        char value[10];
+        Card cards[CARDS_LIST_SIZE];
+        char color[CARDS_LIST_SIZE];
+        char value[CARDS_LIST_SIZE];
 
         printf("Test Number: %d\n", testNumber + 1);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < CARDS_LIST_SIZE; i++) {
             Card currentCard;
             // Adjusted format specifier to exclude both opening and closing parentheses
             fscanf(file, " (%s ", color);

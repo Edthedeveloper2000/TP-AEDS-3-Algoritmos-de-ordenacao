@@ -68,7 +68,7 @@ void setValueId(Card *card, char *value) {
     } else if (strcmp(value, "9") == 0) {
         card->valueId = 9;
     } else if (strcmp(value, BLOCK) == 0) {
-        card->valueId = 10;
+        card->valueId = CARDS_LIST_SIZE;
     } else if (strcmp(value, GOBACK) == 0) {
         card->valueId = 11;
     } else if (strcmp(value, PLUS_TWO) == 0) {

@@ -10,15 +10,17 @@
 
 /* Definição de cartas especiais */
 
-#define BLOCK "Pular" // valueId 10
+#define BLOCK "Pular" // valueId CARDS_LIST_SIZE
 #define GOBACK "Voltar" // valueId 11
 #define PLUS_TWO "+2" // valueId 12 
 #define PLUS_FOR "+4" // valueId 13
 #define JOKER "Coringa" // valueId 14
 
+#define CARDS_LIST_SIZE 10
+
 typedef struct {
-    char color[10];
-    char value[10];
+    char color[CARDS_LIST_SIZE];
+    char value[CARDS_LIST_SIZE];
     int colorId;
     int valueId;
 } Card;

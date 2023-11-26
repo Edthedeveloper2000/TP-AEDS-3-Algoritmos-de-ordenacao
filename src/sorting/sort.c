@@ -10,50 +10,52 @@
 #include "./quickSort/quick.h"
 #include "./heapSort/heap.h"
 
+#define CARDS_LIST_SIZE 10
+
 void sort(Card cards[]){
     printf("-------------------------\n");
     printf("MÂO INICIAL: \n");
-    printArray(cards, 10);
+    printArray(cards, CARDS_LIST_SIZE);
     printf("-------------------------\n");
 
     /* SELECT SORT */
-    Card* cardsSelect = copyArray(cards, 10);
-    SortingPayload SelectPayload = SelectSort(cardsSelect, 10);
+    Card* cardsSelect = copyArray(cards, CARDS_LIST_SIZE);
+    SortingPayload SelectPayload = SelectSort(cardsSelect, CARDS_LIST_SIZE);
     printf("Select Sort:\n ");
     showSortingPayload(&SelectPayload);
     free(cardsSelect);
 
     /* BUBBLE SORT */
-    Card* cardsBubble = copyArray(cards, 10);
-    SortingPayload payload = bubbleSort(cardsBubble, 10);
+    Card* cardsBubble = copyArray(cards, CARDS_LIST_SIZE);
+    SortingPayload payload = bubbleSort(cardsBubble, CARDS_LIST_SIZE);
     free(cardsBubble);
     printf("Bubble Sort:\n ");
     showSortingPayload(&payload);
 
     /* INSERT SORT */
-    Card* cardsInsert = copyArray(cards, 10);
-    SortingPayload InsertPayload = insertSort(cardsInsert, 10);
+    Card* cardsInsert = copyArray(cards, CARDS_LIST_SIZE);
+    SortingPayload InsertPayload = insertSort(cardsInsert, CARDS_LIST_SIZE);
     printf("Insert Sort:\n ");
     showSortingPayload(&InsertPayload);
     free(cardsInsert);
 
     /* SHELL SORT */
-    Card* cardsShell = copyArray(cards, 10);
-    SortingPayload ShellPayload = shellSort(cardsShell, 10);
+    Card* cardsShell = copyArray(cards, CARDS_LIST_SIZE);
+    SortingPayload ShellPayload = shellSort(cardsShell, CARDS_LIST_SIZE);
     printf("Shell Sort:\n ");
     showSortingPayload(&ShellPayload);
     free(cardsShell);
 
     /* QUICK SORT */
-    Card* cardsQuick = copyArray(cards, 10);
-    SortingPayload QuickPayload = quickSortWrapper(cardsQuick, 10);
+    Card* cardsQuick = copyArray(cards, CARDS_LIST_SIZE);
+    SortingPayload QuickPayload = quickSortWrapper(cardsQuick, CARDS_LIST_SIZE);
     printf("Quick Sort:\n ");
     showSortingPayload(&QuickPayload);
     free(cardsQuick);
 
     /* HEAP SORT */
-    Card* cardsHeap = copyArray(cards, 10);
-    SortingPayload HeapPayload = heapSort(cardsHeap, 10);
+    Card* cardsHeap = copyArray(cards, CARDS_LIST_SIZE);
+    SortingPayload HeapPayload = heapSort(cardsHeap, CARDS_LIST_SIZE);
     printf("Heap Sort:\n ");
     showSortingPayload(&HeapPayload);
     free(cardsHeap);
