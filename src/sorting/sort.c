@@ -1,22 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "sort.h"
+#include "../utils/copyArray/copyArray.h"
 #include "./bubbleSort/bubble.h"
 #include "./selectSort/select.h"
 #include "./InsertSort/insert.h"
 #include "./shellSort/shell.h"
 #include "./quickSort/quick.h"
 #include "./heapSort/heap.h"
-
-// Cópia das cartas iniciais
-Card* copyArray(const Card* source, int size) {
-    Card* copy = malloc(size * sizeof(Card));
-    if (copy == NULL) {
-        exit(EXIT_FAILURE);
-    }
-    memcpy(copy, source, size * sizeof(Card));
-    return copy;
-}
 
 void sort(Card cards[]){
     printf("-------------------------\n");

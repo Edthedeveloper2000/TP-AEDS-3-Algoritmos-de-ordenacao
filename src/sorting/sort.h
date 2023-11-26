@@ -1,5 +1,8 @@
 #include "../types/Card/card.h"
 
+#ifndef SORT_H
+#define SORT_H
+
 void sort(Card cards[]);
 
-Card* copyArray(const Card* source, int size);
+#endif // SORT_H
