@@ -1,0 +1,86 @@
+MAO INICIAL: 
+Mao de cartas: 
+Select Sort:
+Mão de cartas:
+[1]: Verde 6 
+[2]: Verde Pular 
+[3]: Amarelo 6 
+[4]: Amarelo Voltar 
+[5]: Vermelho 3 
+[6]: Vermelho 6 
+[7]: Vermelho +2 
+[8]: Azul 4 
+[9]: Azul 8 
+[10]: Azul 9 
+Comparações: 83, Movimentos: 9, Tempo: 0.000000 segundos
+-------------------------
+Bubble Sort:
+Mão de cartas:
+[1]: Verde 6 
+[2]: Verde Pular 
+[3]: Amarelo 6 
+[4]: Amarelo Voltar 
+[5]: Vermelho 3 
+[6]: Vermelho 6 
+[7]: Vermelho +2 
+[8]: Azul 4 
+[9]: Azul 8 
+[10]: Azul 9 
+Comparações: 137, Movimentos: 30, Tempo: 0.000000 segundos
+-------------------------
+Insert Sort:
+Mão de cartas:
+[1]: Verde 6 
+[2]: Verde Pular 
+[3]: Amarelo 6 
+[4]: Amarelo Voltar 
+[5]: Vermelho 3 
+[6]: Vermelho 6 
+[7]: Vermelho +2 
+[8]: Azul 4 
+[9]: Azul 8 
+[10]: Azul 9 
+Comparações: 60, Movimentos: 39, Tempo: 0.000000 segundos
+-------------------------
+Shell Sort:
+Mão de cartas:
+[1]: Verde 6 
+[2]: Verde Pular 
+[3]: Amarelo 6 
+[4]: Amarelo Voltar 
+[5]: Vermelho 3 
+[6]: Vermelho 6 
+[7]: Vermelho +2 
+[8]: Azul 4 
+[9]: Azul 8 
+[10]: Azul 9 
+Comparações: 28, Movimentos: 36, Tempo: 0.000000 segundos
+-------------------------
+Quick Sort:
+Mão de cartas:
+[1]: Verde 6 
+[2]: Verde Pular 
+[3]: Amarelo 6 
+[4]: Amarelo Voltar 
+[5]: Vermelho 3 
+[6]: Vermelho 6 
+[7]: Vermelho +2 
+[8]: Azul 4 
+[9]: Azul 8 
+[10]: Azul 9 
+Comparações: 42, Movimentos: 11, Tempo: 0.000000 segundos
+-------------------------
+Heap Sort:
+Mão de cartas:
+[1]: Verde 6 
+[2]: Verde Pular 
+[3]: Amarelo 6 
+[4]: Amarelo Voltar 
+[5]: Vermelho 3 
+[6]: Vermelho 6 
+[7]: Vermelho +2 
+[8]: Azul 4 
+[9]: Azul 8 
+[10]: Azul 9 
+Comparações: 62, Movimentos: 26, Tempo: 0.000000 segundos
+-------------------------
