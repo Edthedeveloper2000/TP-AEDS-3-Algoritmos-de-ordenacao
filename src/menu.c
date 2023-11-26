@@ -41,7 +41,7 @@ void startInteractiveMode() {
     switch (outputMode)
     {
     case 1:
-        sort(cards);
+        sort(cards, 0);
         break;
     
     case 2:
@@ -89,7 +89,7 @@ void startFileMode() {
         switch (outputMode)
         {
         case 1:
-            sort(cards);
+            sort(cards, testNumber);
             break;
         
         case 2:
