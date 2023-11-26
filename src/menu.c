@@ -45,7 +45,7 @@ void startInteractiveMode() {
         break;
     
     case 2:
-        fsort(cards);
+        fsort(cards, 0);
         break;
         
     default:
@@ -57,6 +57,7 @@ void startInteractiveMode() {
 void startFileMode() {
     int n = 0;
     FILE *file;
+    int outputMode = 0;
 
     file = fopen("src/tests/test.txt", "r");
 
@@ -66,13 +67,16 @@ void startFileMode() {
     }
 
     fscanf(file, "%d", &n);
+    printf("Modo de Saída: \n");
+    printf("1 - Modo Terminal \n");
+    printf("2 - Modo Arquivo \n");
+    scanf("%d", &outputMode);
+    
 
     for (int testNumber = 0; testNumber < n; testNumber++) {
         Card cards[CARDS_LIST_SIZE];
         char color[CARDS_LIST_SIZE];
         char value[CARDS_LIST_SIZE];
-
-        printf("Test Number: %d\n", testNumber + 1);
 
         for (int i = 0; i < CARDS_LIST_SIZE; i++) {
             Card currentCard;
@@ -82,8 +86,19 @@ void startFileMode() {
             initializeCard(&currentCard, color, value);
             cards[i] = currentCard;
         }
-
-        sort(cards);
+        switch (outputMode)
+        {
+        case 1:
+            sort(cards);
+            break;
+        
+        case 2:
+            fsort(cards, testNumber);
+            break;
+            
+        default:
+            break;
+        }
     }
 
     fclose(file);
