@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include "quick.h"
 #include "../../utils/swap/swap.h"
 
@@ -42,14 +43,18 @@ void quickSort(Card cards[], int low, int high, int *moves, int *comparisons) {
 SortingPayload quickSortWrapper(Card cards[], int n) {
     int moves = 0;
     int comparisons = 0;
-    double cpu_time_used;
-    clock_t start, end;
-    start = clock();
+    LARGE_INTEGER frequency;
+    LARGE_INTEGER start, end;
+
+    QueryPerformanceFrequency(&frequency);
+    
+    QueryPerformanceCounter(&start);
 
     quickSort(cards, 0, n - 1, &moves, &comparisons);
 
-    end = clock();
-    cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+    QueryPerformanceCounter(&end);
+
+    double cpu_time_used = (double)(end.QuadPart - start.QuadPart) / frequency.QuadPart;
 
     SortingPayload payload;
     createSortingPayload(&payload, n, moves, comparisons, cpu_time_used, cards);

@@ -1,16 +1,20 @@
-#include <time.h>
 #include <stdio.h>
+#include <windows.h>
 #include "bubble.h"
 #include "../../utils/swap/swap.h"
-
 
 SortingPayload bubbleSort(Card cards[], int n) {
     int i, j;
     int moves = 0;
     int comparisons = 0;
-    double cpu_time_used;
-    clock_t start, end;
-    start = clock();
+    
+    LARGE_INTEGER frequency;
+    LARGE_INTEGER start, end;
+
+    QueryPerformanceFrequency(&frequency);
+    
+    QueryPerformanceCounter(&start);
+
     for (i = 0; i < n-1; i++) {
         for (j = 0; j < n-i-1; j++) {
             if (cards[j].colorId > cards[j+1].colorId) {
@@ -27,12 +31,11 @@ SortingPayload bubbleSort(Card cards[], int n) {
         }
     }
 
-    end = clock();
+    QueryPerformanceCounter(&end);
 
-    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    double cpu_time_used = (double)(end.QuadPart - start.QuadPart) / frequency.QuadPart;
 
     SortingPayload payload;
     createSortingPayload(&payload, n, moves, comparisons, cpu_time_used, cards);
     return payload;
 }
-

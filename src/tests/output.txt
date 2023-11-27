@@ -1,5 +1,18 @@
-MAO INICIAL: 
-Mao de cartas: 
+Teste Nº: 1
+-------------------------
+MÂO INICIAL: 
+Mão de cartas: 
+[1]: Azul 9 
+[2]: Azul 4 
+[3]: Verde 6 
+[4]: Azul 8 
+[5]: Amarelo Voltar 
+[6]: Vermelho +2 
+[7]: Verde Pular 
+[8]: Vermelho 3 
+[9]: Vermelho 6 
+[10]: Amarelo 6 
+-------------------------
 Select Sort:
 Mão de cartas:
 [1]: Verde 6 
@@ -12,7 +25,7 @@ Mão de cartas:
 [8]: Azul 4 
 [9]: Azul 8 
 [10]: Azul 9 
-Comparações: 83, Movimentos: 9, Tempo: 0.000000 segundos
+Comparações: 121, Movimentos: 9, Tempo: 0.000001 segundos
 -------------------------
 Bubble Sort:
 Mão de cartas:
@@ -26,7 +39,7 @@ Mão de cartas:
 [8]: Azul 4 
 [9]: Azul 8 
 [10]: Azul 9 
-Comparações: 137, Movimentos: 30, Tempo: 0.000000 segundos
+Comparações: 85, Movimentos: 30, Tempo: 0.000002 segundos
 -------------------------
 Insert Sort:
 Mão de cartas:
@@ -40,7 +53,7 @@ Mão de cartas:
 [8]: Azul 4 
 [9]: Azul 8 
 [10]: Azul 9 
-Comparações: 60, Movimentos: 39, Tempo: 0.000000 segundos
+Comparações: 120, Movimentos: 39, Tempo: 0.000001 segundos
 -------------------------
 Shell Sort:
 Mão de cartas:
@@ -54,7 +67,7 @@ Mão de cartas:
 [8]: Azul 4 
 [9]: Azul 8 
 [10]: Azul 9 
-Comparações: 28, Movimentos: 36, Tempo: 0.000000 segundos
+Comparações: 42, Movimentos: 36, Tempo: 0.000001 segundos
 -------------------------
 Quick Sort:
 Mão de cartas:
@@ -68,7 +81,7 @@ Mão de cartas:
 [8]: Azul 4 
 [9]: Azul 8 
 [10]: Azul 9 
-Comparações: 42, Movimentos: 11, Tempo: 0.000000 segundos
+Comparações: 59, Movimentos: 11, Tempo: 0.000001 segundos
 -------------------------
 Heap Sort:
 Mão de cartas:
@@ -82,5 +95,203 @@ Mão de cartas:
 [8]: Azul 4 
 [9]: Azul 8 
 [10]: Azul 9 
-Comparações: 62, Movimentos: 26, Tempo: 0.000000 segundos
+Comparações: 79, Movimentos: 26, Tempo: 0.000002 segundos
+-------------------------
+Teste Nº: 2
+-------------------------
+MÂO INICIAL: 
+Mão de cartas: 
+[1]: Preto +4 
+[2]: Azul 5 
+[3]: Vermelho 7 
+[4]: Preto Coringa 
+[5]: Preto +4 
+[6]: Amarelo 0 
+[7]: Verde 0 
+[8]: Amarelo 8 
+[9]: Verde Voltar 
+[10]: Vermelho Pular 
+-------------------------
+Select Sort:
+Mão de cartas:
+[1]: Verde 0 
+[2]: Verde Voltar 
+[3]: Amarelo 0 
+[4]: Amarelo 8 
+[5]: Vermelho 7 
+[6]: Vermelho Pular 
+[7]: Azul 5 
+[8]: Preto +4 
+[9]: Preto +4 
+[10]: Preto Coringa 
+Comparações: 107, Movimentos: 9, Tempo: 0.000001 segundos
+-------------------------
+Bubble Sort:
+Mão de cartas:
+[1]: Verde 0 
+[2]: Verde Voltar 
+[3]: Amarelo 0 
+[4]: Amarelo 8 
+[5]: Vermelho 7 
+[6]: Vermelho Pular 
+[7]: Azul 5 
+[8]: Preto +4 
+[9]: Preto +4 
+[10]: Preto Coringa 
+Comparações: 75, Movimentos: 31, Tempo: 0.000002 segundos
+-------------------------
+Insert Sort:
+Mão de cartas:
+[1]: Verde 0 
+[2]: Verde Voltar 
+[3]: Amarelo 0 
+[4]: Amarelo 8 
+[5]: Vermelho 7 
+[6]: Vermelho Pular 
+[7]: Azul 5 
+[8]: Preto +4 
+[9]: Preto +4 
+[10]: Preto Coringa 
+Comparações: 124, Movimentos: 40, Tempo: 0.000001 segundos
+-------------------------
+Shell Sort:
+Mão de cartas:
+[1]: Verde 0 
+[2]: Verde Voltar 
+[3]: Amarelo 0 
+[4]: Amarelo 8 
+[5]: Vermelho 7 
+[6]: Vermelho Pular 
+[7]: Azul 5 
+[8]: Preto +4 
+[9]: Preto +4 
+[10]: Preto Coringa 
+Comparações: 33, Movimentos: 33, Tempo: 0.000001 segundos
+-------------------------
+Quick Sort:
+Mão de cartas:
+[1]: Verde 0 
+[2]: Verde Voltar 
+[3]: Amarelo 0 
+[4]: Amarelo 8 
+[5]: Vermelho 7 
+[6]: Vermelho Pular 
+[7]: Azul 5 
+[8]: Preto +4 
+[9]: Preto +4 
+[10]: Preto Coringa 
+Comparações: 56, Movimentos: 8, Tempo: 0.000001 segundos
+-------------------------
+Heap Sort:
+Mão de cartas:
+[1]: Verde 0 
+[2]: Verde Voltar 
+[3]: Amarelo 0 
+[4]: Amarelo 8 
+[5]: Vermelho 7 
+[6]: Vermelho Pular 
+[7]: Azul 5 
+[8]: Preto +4 
+[9]: Preto +4 
+[10]: Preto Coringa 
+Comparações: 73, Movimentos: 24, Tempo: 0.000002 segundos
+-------------------------
+Teste Nº: 3
+-------------------------
+MÂO INICIAL: 
+Mão de cartas: 
+[1]: Vermelho 7 
+[2]: Azul 2 
+[3]: Amarelo 3 
+[4]: Amarelo 2 
+[5]: Amarelo 6 
+[6]: Preto Coringa 
+[7]: Azul +2 
+[8]: Vermelho +2 
+[9]: Verde Pular 
+[10]: Verde 5 
+-------------------------
+Select Sort:
+Mão de cartas:
+[1]: Verde 5 
+[2]: Verde Pular 
+[3]: Amarelo 2 
+[4]: Amarelo 3 
+[5]: Amarelo 6 
+[6]: Vermelho 7 
+[7]: Vermelho +2 
+[8]: Azul 2 
+[9]: Azul +2 
+[10]: Preto Coringa 
+Comparações: 121, Movimentos: 9, Tempo: 0.000001 segundos
+-------------------------
+Bubble Sort:
+Mão de cartas:
+[1]: Verde 5 
+[2]: Verde Pular 
+[3]: Amarelo 2 
+[4]: Amarelo 3 
+[5]: Amarelo 6 
+[6]: Vermelho 7 
+[7]: Vermelho +2 
+[8]: Azul 2 
+[9]: Azul +2 
+[10]: Preto Coringa 
+Comparações: 83, Movimentos: 28, Tempo: 0.000001 segundos
+-------------------------
+Insert Sort:
+Mão de cartas:
+[1]: Verde 5 
+[2]: Verde Pular 
+[3]: Amarelo 2 
+[4]: Amarelo 3 
+[5]: Amarelo 6 
+[6]: Vermelho 7 
+[7]: Vermelho +2 
+[8]: Azul 2 
+[9]: Azul +2 
+[10]: Preto Coringa 
+Comparações: 112, Movimentos: 37, Tempo: 0.000000 segundos
+-------------------------
+Shell Sort:
+Mão de cartas:
+[1]: Verde 5 
+[2]: Verde Pular 
+[3]: Amarelo 2 
+[4]: Amarelo 3 
+[5]: Amarelo 6 
+[6]: Vermelho 7 
+[7]: Vermelho +2 
+[8]: Azul 2 
+[9]: Azul +2 
+[10]: Preto Coringa 
+Comparações: 48, Movimentos: 38, Tempo: 0.000001 segundos
+-------------------------
+Quick Sort:
+Mão de cartas:
+[1]: Verde 5 
+[2]: Verde Pular 
+[3]: Amarelo 2 
+[4]: Amarelo 3 
+[5]: Amarelo 6 
+[6]: Vermelho 7 
+[7]: Vermelho +2 
+[8]: Azul 2 
+[9]: Azul +2 
+[10]: Preto Coringa 
+Comparações: 65, Movimentos: 14, Tempo: 0.000001 segundos
+-------------------------
+Heap Sort:
+Mão de cartas:
+[1]: Verde 5 
+[2]: Verde Pular 
+[3]: Amarelo 2 
+[4]: Amarelo 3 
+[5]: Amarelo 6 
+[6]: Vermelho 7 
+[7]: Vermelho +2 
+[8]: Azul 2 
+[9]: Azul +2 
+[10]: Preto Coringa 
+Comparações: 79, Movimentos: 26, Tempo: 0.000002 segundos
 -------------------------

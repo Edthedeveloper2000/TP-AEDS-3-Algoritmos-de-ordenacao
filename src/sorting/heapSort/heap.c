@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include "heap.h"
 #include "../../utils/swap/swap.h"
 
@@ -30,9 +31,12 @@ void heapify(Card cards[], int n, int i, int *comparisons, int *moves) {
 SortingPayload heapSort(Card cards[], int n) {
     int moves = 0;
     int comparisons = 0;
-    double cpu_time_used;
-    clock_t start, end;
-    start = clock();
+    LARGE_INTEGER frequency;
+    LARGE_INTEGER start, end;
+
+    QueryPerformanceFrequency(&frequency);
+    
+    QueryPerformanceCounter(&start);
 
     for (int i = n / 2 - 1; i >= 0; i--) {
         heapify(cards, n, i, &comparisons, &moves);
@@ -44,8 +48,9 @@ SortingPayload heapSort(Card cards[], int n) {
         heapify(cards, i, 0, &comparisons, &moves);
     }
 
-    end = clock();
-    cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+    QueryPerformanceCounter(&end);
+
+    double cpu_time_used = (double)(end.QuadPart - start.QuadPart) / frequency.QuadPart;
 
     SortingPayload payload;
     createSortingPayload(&payload, n, moves, comparisons, cpu_time_used, cards);
