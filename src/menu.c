@@ -20,18 +20,12 @@ void showInitialMenu() {
 }
 // Modo Interativo
 void startInteractiveMode() {
-    Card cards[CARDS_LIST_SIZE];
-    char color[CARDS_LIST_SIZE];
-    char value[CARDS_LIST_SIZE];
     int outputMode = 0;
-
-     printf("Informe cor e valor de 10 cartas: ex: (Azul 1)\n");
-    for(int i = 0; i<CARDS_LIST_SIZE;i++) {
-        Card currentCard;
-        scanf("%s %s", color, value);
-        initializeCard(&currentCard, color, value);
-        cards[i] = currentCard;
-    }
+    Card deck[DECK_SIZE];
+    Card cards[CARDS_LIST_SIZE];
+    
+    createRandomDeck(deck);
+    selectAmountCards(deck, cards, CARDS_LIST_SIZE);
 
     printf("Modo de Saída: \n");
     printf("1 - Modo Terminal \n");
