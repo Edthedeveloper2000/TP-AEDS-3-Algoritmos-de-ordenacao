@@ -25,7 +25,7 @@ void startInteractiveMode() {
     char value[CARDS_LIST_SIZE];
     int outputMode = 0;
 
-     printf("Informe cor e valor de CARDS_LIST_SIZE cartas: ex: (Azul 1)\n");
+     printf("Informe cor e valor de 10 cartas: ex: (Azul 1)\n");
     for(int i = 0; i<CARDS_LIST_SIZE;i++) {
         Card currentCard;
         scanf("%s %s", color, value);
