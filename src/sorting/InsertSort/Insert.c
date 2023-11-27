@@ -19,7 +19,7 @@ SortingPayload insertSort(Card cards[], int n) {
             cards[j + 1] = cards[j];
             j = j - 1;
             moves++;
-            comparisons += 2; 
+            comparisons += 4; 
         }
 
         cards[j + 1] = aux;

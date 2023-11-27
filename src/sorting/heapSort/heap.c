@@ -20,6 +20,7 @@ void heapify(Card cards[], int n, int i, int *comparisons, int *moves) {
     }
 
     if (largest != i) {
+        (*comparisons)++;
         (*moves)++;
         swap(&cards[i], &cards[largest]);
         heapify(cards, n, largest, comparisons, moves);

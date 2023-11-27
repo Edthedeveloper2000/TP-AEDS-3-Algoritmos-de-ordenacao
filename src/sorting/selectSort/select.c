@@ -17,9 +17,9 @@ SortingPayload SelectSort(Card* cards, int n){
                 comparisons++;
             } else if (cards[min].colorId == cards[j].colorId && cards[min].valueId > cards[j].valueId) {
                 min = j;
-                comparisons+=2;
+                comparisons+=3;
             } else {
-                comparisons+=2;
+                comparisons+=3;
             }
         }
         aux = cards[min];

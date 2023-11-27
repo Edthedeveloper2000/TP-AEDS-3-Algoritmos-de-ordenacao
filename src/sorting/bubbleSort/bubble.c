@@ -20,9 +20,9 @@ SortingPayload bubbleSort(Card cards[], int n) {
             } else if (cards[j].colorId == cards[j+1].colorId && cards[j].valueId > cards[j+1].valueId) {
                 swap(&cards[j], &cards[j+1]);
                 moves++;
-                comparisons+=2;
+                comparisons+=3;
             } else {
-                comparisons+=2;
+                comparisons+=3;
             }
         }
     }

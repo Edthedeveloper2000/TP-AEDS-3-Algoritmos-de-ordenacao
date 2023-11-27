@@ -19,9 +19,9 @@ int partition(Card cards[], int low, int high, int *moves, int *comparisons) {
             i++;
             swap(&cards[i], &cards[j]);
             *moves++;   
-            (*comparisons)+=2;
+            (*comparisons)+=3;
         } else {
-            (*comparisons)+=2;
+            (*comparisons)+=3;
         }
     }
 

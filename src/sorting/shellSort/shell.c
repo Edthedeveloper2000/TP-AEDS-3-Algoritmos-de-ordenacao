@@ -21,7 +21,7 @@ SortingPayload shellSort(Card cards[], int n) {
                 cards[j] = cards[j - h];
                 j -= h;
                 moves++;
-                comparisons += 2;
+                comparisons += 3;
             }
 
             cards[j] = aux;
