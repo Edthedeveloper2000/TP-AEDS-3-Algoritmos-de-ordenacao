@@ -10,7 +10,7 @@
 
 /* Definição de cartas especiais */
 
-#define BLOCK "Pular" // valueId CARDS_LIST_SIZE
+#define BLOCK "Pular" // valueId 10
 #define GOBACK "Voltar" // valueId 11
 #define PLUS_TWO "+2" // valueId 12 
 #define PLUS_FOR "+4" // valueId 13
@@ -35,6 +35,8 @@ void setValue(Card *card, char *value);
 
 int getColorId(Card *card);
 void setColorId(Card *card, char *color);
+
+char* intToCardValue(int valueId);
 
 int getValueId(Card *card);
 void setValueId(Card *card, char *value);

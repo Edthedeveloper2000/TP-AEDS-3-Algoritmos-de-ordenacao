@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "card.h"
 
 void initializeCard(Card *card, char *color, char *value) {
@@ -44,6 +45,62 @@ void setColorId(Card *card, char *color) {
 
 int getValueId(Card *card) {
     return card->valueId;
+}
+
+char* intToCardValue(int valueId) {
+    char* result = (char*)malloc(CARDS_LIST_SIZE * sizeof(char));
+
+    switch (valueId) {
+        case 0:
+            strcpy(result, "0");
+            break;
+        case 1:
+            strcpy(result, "1");
+            break;
+        case 2:
+            strcpy(result, "2");
+            break;
+        case 3:
+            strcpy(result, "3");           
+            break;
+        case 4:
+            strcpy(result, "4");
+            break;
+        case 5:
+            strcpy(result, "5");
+            break;
+        case 6:
+            strcpy(result, "6");
+            break;
+        case 7:
+            strcpy(result, "7");
+            break;
+        case 8:
+            strcpy(result, "8");
+            break;
+        case 9:
+            strcpy(result, "9");
+            break;
+        case 10:
+            strcpy(result, BLOCK);
+            break;
+        case 11:
+            strcpy(result, GOBACK);
+            break;
+        case 12:
+            strcpy(result, PLUS_TWO);
+            break;
+        case 13:
+            strcpy(result, PLUS_FOR);
+            break;
+        case 14:
+            strcpy(result, JOKER);
+            break;
+        default:
+            strcpy(result, "inválido");
+    }
+
+    return result;
 }
 
 void setValueId(Card *card, char *value) {
