@@ -7,6 +7,8 @@
  * Realiza a ordenação de um array de cartas com quick sort
  * @param cards - array a ser ordenado
  * @param n - tamanho de array
+ * @return SortingPayload - entidade com as informações de tempo,
+ * movimentações e comparações do sorting.
 */
 SortingPayload quickSortWrapper(Card cards[], int n);
 
