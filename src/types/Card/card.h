@@ -25,6 +25,12 @@ typedef struct {
     int valueId;
 } Card;
 
+/**
+ * Cria uma instância de Card
+ * @param *card - ponteiro para armazenar os valores da carta
+ * @param *color - cor da carta
+ * @param *value - valor da carta
+*/
 void initializeCard(Card *card, char *color, char *value);
 
 char * getColor(Card *card);
@@ -36,6 +42,12 @@ void setValue(Card *card, char *value);
 int getColorId(Card *card);
 void setColorId(Card *card, char *color);
 
+/**
+ * Mapeia um valor inteiro fornecido para o valor
+ * correspondente da carta.
+ * @param valueId - valor inteiro a ser mapeado
+ * @return char* - valor da carta correspondente ao valueId
+*/
 char* intToCardValue(int valueId);
 
 int getValueId(Card *card);
