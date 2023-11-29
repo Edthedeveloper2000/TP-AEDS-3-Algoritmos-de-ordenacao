@@ -15,11 +15,11 @@ void showInitialMenu() {
 
     scanf("%d", &mode);
 
-    mode == 1 ?  startInteractiveMode() : startFileMode();
+    mode == 1 ?  startRandomMode() : startFileMode();
     
 }
-// Modo Interativo
-void startInteractiveMode() {
+
+void startRandomMode() {
     int outputMode = 0;
     Card deck[DECK_SIZE];
     Card cards[CARDS_LIST_SIZE];
@@ -76,8 +76,8 @@ void startFileMode() {
 
         for (int i = 0; i < CARDS_LIST_SIZE; i++) {
             Card currentCard;
-            // Adjusted format specifier to exclude both opening and closing parentheses
             fscanf(file, " (%s ", color);
+            // "%9[^)]) " é uma expressão regular para encontrar o valor desejado sem considerar o parentesis
             i != 9 ?  fscanf(file, "%9[^)]) ", value) : fscanf(file, "%9[^)])\n", value);
             initializeCard(&currentCard, color, value);
             cards[i] = currentCard;

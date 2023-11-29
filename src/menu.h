@@ -12,7 +12,7 @@ void showInitialMenu();
  * cartas a serem ordenadas são geradas
  * aleatóriamente
 */
-void startInteractiveMode();
+void startRandomMode();
 
 /**
  * Inicia o modo de arquivo, no qual as cartas
