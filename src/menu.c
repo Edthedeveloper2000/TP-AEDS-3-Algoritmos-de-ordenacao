@@ -52,8 +52,10 @@ void startFileMode() {
     int n = 0;
     FILE *file;
     int outputMode = 0;
-
-    file = fopen("src/tests/test.txt", "r");
+    char filePath[100];
+    printf("Informe o caminho do arquivo: \n");
+    scanf("%s", filePath);
+    file = fopen(filePath, "r");
 
     if (file == NULL) {
         printf("Error opening the file\n");
