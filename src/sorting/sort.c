@@ -16,7 +16,7 @@ void sort(Card cards[], int testNumber){
     printf("Teste Nº: %d\n", testNumber + 1);
     printf("-------------------------\n");
     printf("MÂO INICIAL: \n");
-    printArray(cards, CARDS_LIST_SIZE);
+    showCards(cards, CARDS_LIST_SIZE);
     printf("-------------------------\n");
 
     /* SELECT SORT */

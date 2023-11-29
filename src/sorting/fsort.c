@@ -25,7 +25,7 @@ void fsort(Card cards[], int testNumber){
     fprintf(output, "-------------------------\n");
     fprintf(output, "MÂO INICIAL: \n");
     fprintf(output, "Mão de cartas: \n");
-    printArrayFile(cards, CARDS_LIST_SIZE, output);
+    showCardsFile(cards, CARDS_LIST_SIZE, output);
     fprintf(output, "-------------------------\n");
 
     // SELECT SORT
