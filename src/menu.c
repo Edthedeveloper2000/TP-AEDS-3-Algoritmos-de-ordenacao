@@ -10,7 +10,7 @@
 void showInitialMenu() {
     int mode;
     printf("Como deseja inserir as cartas? \n");
-    printf("1 - Modo interativo \n");
+    printf("1 - Modo aleatório \n");
     printf("2 - Modo de leitura de arquivo \n");
 
     scanf("%d", &mode);
